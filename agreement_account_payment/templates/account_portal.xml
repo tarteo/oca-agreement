@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="form" inherit_id="account_payment.form">
+        <xpath expr="//div[@id='o_payment_form_options']" position="after">
+            <div class="mt-3">
+                <h4
+                    id="o_payment_tokens_heading"
+                    class="fs-6 small text-uppercase fw-bolder"
+                >
+                    Terms and conditions
+                </h4>
+                <input
+                    type="checkbox"
+                    id="js_payment_terms_conditions"
+                    name="terms_conditions"
+                    required="required"
+                />
+                <label for="js_payment_terms_conditions" class="form-check-label">
+                    I accept the <a
+                    href="/agreement/terms"
+                    target="_blank"
+                >terms and conditions</a>
+                </label>
+            </div>
+        </xpath>
+    </template>
+</odoo>
